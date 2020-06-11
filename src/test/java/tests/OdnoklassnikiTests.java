@@ -17,7 +17,7 @@ public class OdnoklassnikiTests {
     @Test
     @Description("Домашнее задание к уроку №1")
     void editOdnoklassnikiProfile() {
-//        Configuration.headless = true;
+        Configuration.headless = true;
         open("https://ok.ru/");
         $("#field_email").val("79858959243");
         $("#field_password").val("Sudir123").pressEnter();
@@ -37,7 +37,7 @@ public class OdnoklassnikiTests {
         $(withText("Пётр")).click();
         $("body").shouldHave(text("345 школа"));
     }
-//    команда для запуска из стерминала:
+//    команда для запуска из стерминала
 //    gradle clean test --tests "tests.facebook.editOdnoklassnikiProfile" -Dlogin= -Dpassword=
 
 
