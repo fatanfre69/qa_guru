@@ -28,6 +28,7 @@ class GoogleTests extends TestBase {
     }
 
     // Копия предыдущего теста, но с "попрятанной логикой"
+    @Tag("facebook")
     @Test
     @Description("Positive test with testid with PO")
     void successfulSearchWithPO() {
