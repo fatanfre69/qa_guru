@@ -21,8 +21,6 @@ public class OdnoklassnikiTests {
         open("https://ok.ru/");
         $("#field_email").val("79858959243");
         $("#field_password").val("Sudir123").pressEnter();
-//        $("#field_email").val(login);
-//        $("#field_password").val(password).pressEnter();
         $(".toolbar_ucard").click();
         $(withText("Пётр")).click();
         $("#nullcity").click();
@@ -37,7 +35,7 @@ public class OdnoklassnikiTests {
         $(withText("Пётр")).click();
         $("body").shouldHave(text("345 школа"));
     }
-//    команда для запуска из стерминала
+
 //    gradle clean test --tests "tests.facebook.editOdnoklassnikiProfile" -Dlogin= -Dpassword=
 
 
