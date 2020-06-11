@@ -12,17 +12,17 @@ import static helpers.Environment.*;
 @Tag("yandex_market")
 public class YandexMarketTests extends TestBase {
 
+
     @Test
-    @Description("Checking item can be found")
-    void checkItemCanBeFound() {
+    @Description("Домашнее задание к уроку №1")
+    void searchItemYandexMarket() {
         open(yandexMarketUrl);
-
         $("html").shouldHave(text("Яндекс.Маркет"));
-        $("#header-search").val(yandexMarketItemName).pressEnter();
-        $x("//h3/a[1]").click();
-        switchTo().window(1);
-
-        $(".n-title__text").shouldHave(text(yandexMarketItemName));
+        $("#header-search").val("item").pressEnter();
+        $("[class='_2IwbFpEZn7 wwZc93J2Ao']").click();
+        $("[class='_3TfWusA7bt _26mXJDBxtH']").shouldHave(text("item"));
     }
 
+
 }
+

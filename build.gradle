@@ -70,6 +70,10 @@ task google_tests(type: Test) {
     }
 }
 
+test {
+    useJUnitPlatform()
+}
+
 help {
     doFirst {
         println ""
